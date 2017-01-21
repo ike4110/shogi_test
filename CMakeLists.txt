@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 2.8)
+project( Shogi_cv )
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+find_package( OpenCV REQUIRED )
+find_package( X11    REQUIRED ) 
+add_executable( Shogi Shogi.cpp )
+target_link_libraries( Shogi ${OpenCV_LIBS} )
+target_link_libraries( Shogi ${X11_LIBRARIES} )
+
